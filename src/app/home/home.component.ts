@@ -9,19 +9,19 @@ export class HomeComponent {
 
   title = 'devs';
 
-  timelineData = [
+  timelineData_en = [
     {
       type: 'position',
       company: {
-        name: 'Impel IT Solutions',
-        website: 'http://www.impelitsolutions.com/'
+        name: 'First Decision',
+        website: 'https://www.firstdecision.com.br'
       },
-      title: 'Software Engineer',
-      technologies: ['angular', 'spring-boot'],
+      title: 'Senior Fullstack Developer',
+      technologies: ['angular', 'laravel', 'postgres', 'jenkins', 'rancher'],
       responsibilities: [
-        'Adding necessary angular components and directives for the project',
-        'Implementing REST APIs using spring-boot',
-        'Refactored angular components to increase flexibility and maintainability'
+        'Developed many modules of a governamental system that control taxes and incomes of a public fund;',
+        'Implemented backend functions using Laravel;',
+        'Used Angular to develop frontend interaction, using synchronous and asynchronous functions.'
       ],
       dates: {
         start: new Date(2020, 2),
@@ -31,29 +31,28 @@ export class HomeComponent {
     {
       type: 'position',
       company: {
-        name: 'Relisource Technologies Ltd.',
-        website: 'http://www.relisource.com/'
+        name: 'Sebrae Bahia',
+        website: 'https://www.sebraeatende.com.br/'
       },
-      title: 'Software Engineer',
-      technologies: ['salesforce', 'angularjs'],
+      title: 'Software Analyst',
+      technologies: ['scrum', 'agile', 'pmbok', 'php', 'jquery', 'sql server', 'mysql', 'kettle', 'qlikview'],
       responsibilities: [
-        'Added features in a large scale enterprise application',
-        'Wrote unit tests',
-        'Optimized database queries'
+        'Tech Lead, software project management, contracts management and database administration of large scale systems;',
+        'Support, analysis and development of corporate systems, e-commerces and websites.',
       ],
       dates: {
-        start: new Date(2019, 7),
-        end: new Date(2020, 1)
+        start: new Date(2012, 1),
+        end: new Date(2022, 1)
       }
     },
     {
       type: 'position',
       company: {
-        name: 'Orbitax Inc.',
-        website: 'https://orbitax.com/'
+        name: 'Instituto Recôncavo de Tecnologia',
+        website: 'https://www.reconcavo.org.br/'
       },
-      title: 'Associate Software Engineer',
-      technologies: ['angular', '.net', '.net-core', 'mongodb', 'jenkins', 'graphql', 'rabbitmq'],
+      title: 'Junior Developer',
+      technologies: ['c#.net', 'vb.net', '.net-core', 'sql server', 'javascript', 'reporting service'],
       responsibilities: [
         'Developed highly functional and reusable UI packages in Angular and published to npm registry',
         'Consumed ​REST APIs​ and developed few of them in microservice based architecture',
@@ -61,8 +60,8 @@ export class HomeComponent {
         'Implemented ​.NET MVC​ application for playing video tutorials'
       ],
       dates: {
-        start: new Date(2018, 2),
-        end: new Date(2019, 6)
+        start: new Date(2010, 4),
+        end: new Date(2012, 1)
       }
     },
     {

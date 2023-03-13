@@ -4,13 +4,13 @@
 </mat-toolbar>
 
 <div class="container">
-    <div class="photoBox">
+    <div class="photoBox box">
         <h1>Geeksfo</h1>        
         <h1>Left</h1>        
     </div>
-    <div class="timelineBox">
+    <div class="timelineBox box">
         <mzd-timeline>
-            <mzd-timeline-content *ngFor="let data of timelineData" [card]="false">
+            <mzd-timeline-content *ngFor="let data of timelineData_en" [card]="false">
               <mat-card>
                 <mat-card-header>
                   <mat-card-title *ngIf="data.type==='position'">
@@ -26,14 +26,20 @@
                     {{item}}
                   </ul>
                 </mat-card-content>
+                <mat-card-content>
+                  <div class="stack">
+                    <div class="samp">
+                      <samp>
+                        <span *ngFor="let item of data.technologies">
+                          {{item}}
+                        </span>
+                      </samp>
+                    </div>
+                  </div>
+                </mat-card-content>
               </mat-card>
             </mzd-timeline-content>
         </mzd-timeline>    
     </div>
 </div>
 
-<footer class="mzd-app-footer">
-<div class="footer-content">
-    Made with &hearts; by <a class="portfolio" href="https://mazedulislam.com/" target="_blank">Mazedul Islam</a>
-</div>
-</footer>
