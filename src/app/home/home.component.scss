@@ -1,15 +1,48 @@
-.photoBox {
-    width: 20%;    
-    background-color: green;
-    text-align: right;
-    color: white;
+.container {
+  position: relative;
 }
 
-.timelineBox {
-    width: 80%;    
-    height: 100vh;
-  }
-  
+.header {  
+  border: 1px solid #000000;
+  height: 70px;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1000;
+}
+
+.innerHeader {  
+  clear: both;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  height: 70px;
+}
+
+.sidebar {
+  float: left;
+  width: 30%;
+  height: 400px;
+  background-color: green;
+  background-image: url("../../assets/images/sample.png");
+  text-align: right;
+  color: white;
+}
+
+.content {
+  float: right;
+  width: 70%;
+  border-left: 1px solid #000000;  
+}
+
+.footer {
+  clear: both;
+  margin-top: 10px;
+  border: 1px solid #000000;  
+  height: 1000px;
+}
+
 .stack {
   padding-top: 20px;
   font-size: 12px; 
@@ -19,11 +52,12 @@
 samp {
   background: #000;
   border: 3px groove #ccc;
+  padding: 12px;
   color: #ccc;
   display: block;
 }
 
-.timelineBox ul {
+.content ul {
   padding-inline-start: 15px;
 }
 
@@ -32,40 +66,15 @@ samp {
   line-height: normal;
 }
 
-body {
-    margin: 0;
-    padding: 1rem;
-    max-width: 1200px;    
-  }
-  
-  .container{
-      display:flex;
-  }
-  
-  .column-1 {
-    flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
-    flex-basis: 70%; /* sets initial width to 70% */
-  }
-  
-  .box {    
-    padding: 20px;    
-  }
+@media only screen and (max-width: 900px) {
 
-  @media only screen and (max-width: 900px) {
-    .container {
-        /* it place the items in vertical direction */
-      flex-direction: column;
-    }
-  
-    .box {
-      margin: 0 0 1rem;
-    }
-
-    .photoBox {
-        width: auto;
-    }
-    
-    .timelineBox {
-        width: auto;
-    }
+  .content {
+    width: 100%;
+    border: none;  
   }
+  
+  .sidebar {
+    display: grid;
+    width: 100%;
+  }
+}

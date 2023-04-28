@@ -1,45 +1,48 @@
-<mat-toolbar color="primary" class="mzd-app-toolbar">
-    <h1 class="mat-headline">{{ title }}</h1>
-    <div style="flex: 1;"></div>
-</mat-toolbar>
-
-<div class="container">
-    <div class="photoBox box">
-        <h1>Geeksfo</h1>        
-        <h1>Left</h1>        
-    </div>
-    <div class="timelineBox box">
-        <mzd-timeline>
-            <mzd-timeline-content *ngFor="let data of timelineData_en" [card]="false">
-              <mat-card>
-                <mat-card-header>
-                  <mat-card-title *ngIf="data.type==='position'">
-                    {{data.title}} at <a [href]="data.company.website" target="_blank">{{data.company.name}}</a>
-                  </mat-card-title>
-                  <mat-card-subtitle>
-                    {{data.dates.start | date: 'MMM yyyy'}} -
-                    {{data.dates.end ? (data.dates.end | date: 'MMM yyyy') : 'present'}}
-                  </mat-card-subtitle>
-                </mat-card-header>
-                <mat-card-content>
-                  <ul *ngFor="let item of data.responsibilities">
-                    {{item}}
-                  </ul>
-                </mat-card-content>
-                <mat-card-content>
-                  <div class="stack">
-                    <div class="samp">
-                      <samp>
-                        <span *ngFor="let item of data.technologies">
-                          {{item}}
-                        </span>
-                      </samp>
-                    </div>
-                  </div>
-                </mat-card-content>
-              </mat-card>
-            </mzd-timeline-content>
-        </mzd-timeline>    
-    </div>
+<div class="header">
+  This is header
 </div>
-
+<div class="container">
+  <div class="innerHeader">
+    This is header
+  </div>
+  <div class="sidebar sticky">
+    This is side bar
+  </div>
+  <div class="content">
+    <mzd-timeline>
+      <mzd-timeline-content *ngFor="let data of timelineData_en" [card]="false">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title *ngIf="data.type==='position'">
+              {{data.title}} at <a [href]="data.company.website" target="_blank">{{data.company.name}}</a>
+            </mat-card-title>
+            <mat-card-subtitle>
+              {{data.dates.start | date: 'MMM yyyy'}} -
+              {{data.dates.end ? (data.dates.end | date: 'MMM yyyy') : 'present'}}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <ul *ngFor="let item of data.responsibilities">
+              {{item}}
+            </ul>
+          </mat-card-content>
+          <mat-card-content>
+            <div class="stack">
+              <div class="samp">
+                <samp>
+                  <span *ngFor="let item of data.technologies">
+                    {{item}}
+                  </span>
+                </samp>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </mzd-timeline-content>
+    </mzd-timeline>
+  </div>
+  <div class="footer">
+    <div></div>
+    This is my footer
+  </div>
+</div>

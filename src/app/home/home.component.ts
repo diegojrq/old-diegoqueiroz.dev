@@ -1,11 +1,21 @@
 import { Component } from '@angular/core';
 
+declare var loadStickySidebar: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent {
+
+  ngOnInit(): void {
+  }
+  
+  ngAfterViewInit() {
+    // call the externaljs functions
+    loadStickySidebar();
+  }
 
   title = 'devs';
 
@@ -17,7 +27,7 @@ export class HomeComponent {
         website: 'https://www.firstdecision.com.br'
       },
       title: 'Senior Fullstack Developer',
-      technologies: ['angular', 'laravel', 'postgres', 'jenkins', 'rancher'],
+      technologies: ['angular', 'laravel', 'vue.js', 'symphony', 'postgres', 'jenkins', 'rancher'],
       responsibilities: [
         'Developed many modules of a governamental system that control taxes and incomes of a public fund;',
         'Implemented backend functions using Laravel;',
@@ -34,7 +44,7 @@ export class HomeComponent {
         name: 'Sebrae Bahia',
         website: 'https://www.sebraeatende.com.br/'
       },
-      title: 'Software Analyst',
+      title: 'Tech Lead',
       technologies: ['scrum', 'agile', 'pmbok', 'php', 'jquery', 'sql server', 'mysql', 'kettle', 'qlikview'],
       responsibilities: [
         'Tech Lead, software project management, contracts management and database administration of large scale systems;',
